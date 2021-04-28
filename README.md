@@ -1,3 +1,5 @@
+*If you would like to support these tutorials, you can contribute to my [Patreon account](https://patreon.com/czetsuya)
+
 # Spring Aspect Security
 
 This project secures Spring REST endpoints using Aspect. It introduces a security interceptor
