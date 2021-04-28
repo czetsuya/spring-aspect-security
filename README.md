@@ -14,7 +14,6 @@ into the REST endpoint, so that it can be used for future use.
 Go to the project root folder and run the following command:
 
 ```
-mvnw install
 mvnw sprint-boot:run
 ```
 
