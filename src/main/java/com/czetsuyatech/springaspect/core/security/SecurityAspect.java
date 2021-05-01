@@ -7,6 +7,9 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Edward P. Legaspi | czetsuya@gmail.com
+ */
 @Aspect
 @Component
 public class SecurityAspect {
@@ -15,31 +18,32 @@ public class SecurityAspect {
       value = "@annotation(security)",
       argNames = "joinPoint,security"
   )
-  public void methodAuth(
+  public void methodSecurity(
       JoinPoint joinPoint,
       Security security
   ) {
-    auth(joinPoint, security);
+    authorize(joinPoint, security);
   }
 
   @Before(
       value = "@within(security)",
       argNames = "joinPoint,security"
   )
-  public void classAuth(
+  public void classSecurity(
       JoinPoint joinPoint,
       Security security
   ) {
-    auth(joinPoint, security);
+    authorize(joinPoint, security);
   }
 
-  private void auth(JoinPoint joinPoint, Security security) {
+  private void authorize(JoinPoint joinPoint, Security security) {
 
     CurrentUser currentUser = UserThreadLocalHolder.get();
     if (currentUser == null) {
       throw new UserDoesNotExistsException();
 
-    } else if (currentUser.getPermissions() == null || !currentUser.getPermissions().contains(security.hasPermission())) {
+    } else if (currentUser.getPermissions() == null || !currentUser.getPermissions()
+        .contains(security.hasPermission())) {
       throw new UserNotAuthorizedException(currentUser.getUsername(),
           joinPoint.getSignature().getName());
     }

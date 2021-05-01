@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author Edward P. Legaspi | czetsuya@gmail.com
+ */
 @RestController
 @RequestMapping("/employees")
 @Security(hasPermission = "employee")
@@ -19,7 +22,7 @@ public class EmployeeController {
 
   @Security(hasPermission = "read_employee")
   @GetMapping("/{id}")
-  public void getEmployees(@PathVariable String id, @RequestAttribute Long currentUserId) {
+  public void getEmployee(@PathVariable String id, @RequestAttribute Long currentUserId) {
     System.out.println("currentUserId=" + currentUserId + ", id=" + id);
   }
 }

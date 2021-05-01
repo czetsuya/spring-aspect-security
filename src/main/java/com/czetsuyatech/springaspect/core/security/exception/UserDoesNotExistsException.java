@@ -1,5 +1,8 @@
 package com.czetsuyatech.springaspect.core.security.exception;
 
+/**
+ * @author Edward P. Legaspi | czetsuya@gmail.com
+ */
 public class UserDoesNotExistsException extends SecurityException {
 
   public UserDoesNotExistsException() {

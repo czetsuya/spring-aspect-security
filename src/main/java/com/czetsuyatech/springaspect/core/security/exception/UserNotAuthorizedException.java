@@ -1,5 +1,8 @@
 package com.czetsuyatech.springaspect.core.security.exception;
 
+/**
+ * @author Edward P. Legaspi | czetsuya@gmail.com
+ */
 public class UserNotAuthorizedException extends SecurityException {
 
   public UserNotAuthorizedException(String username, String methodName) {
