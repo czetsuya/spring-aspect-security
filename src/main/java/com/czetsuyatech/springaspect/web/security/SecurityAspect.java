@@ -1,7 +1,7 @@
-package com.czetsuyatech.springaspect.core.security;
+package com.czetsuyatech.springaspect.web.security;
 
-import com.czetsuyatech.springaspect.core.security.exception.UserDoesNotExistsException;
-import com.czetsuyatech.springaspect.core.security.exception.UserNotAuthorizedException;
+import com.czetsuyatech.springaspect.web.security.exception.UserDoesNotExistsException;
+import com.czetsuyatech.springaspect.web.security.exception.UserNotAuthorizedException;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;

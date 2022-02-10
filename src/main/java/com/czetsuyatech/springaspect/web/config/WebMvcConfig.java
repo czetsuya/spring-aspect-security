@@ -1,6 +1,6 @@
-package com.czetsuyatech.springaspect.core.config;
+package com.czetsuyatech.springaspect.web.config;
 
-import com.czetsuyatech.springaspect.core.security.SecurityInterceptor;
+import com.czetsuyatech.springaspect.web.security.SecurityInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

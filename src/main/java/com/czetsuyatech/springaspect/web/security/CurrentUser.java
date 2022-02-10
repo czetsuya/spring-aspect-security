@@ -1,4 +1,4 @@
-package com.czetsuyatech.springaspect.core.security;
+package com.czetsuyatech.springaspect.web.security;
 
 import java.util.Set;
 import lombok.Data;

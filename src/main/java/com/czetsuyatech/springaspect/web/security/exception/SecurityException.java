@@ -1,4 +1,4 @@
-package com.czetsuyatech.springaspect.core.security.exception;
+package com.czetsuyatech.springaspect.web.security.exception;
 
 /**
  * @author Edward P. Legaspi | czetsuya@gmail.com

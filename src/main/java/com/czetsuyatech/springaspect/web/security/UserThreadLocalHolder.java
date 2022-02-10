@@ -1,9 +1,13 @@
-package com.czetsuyatech.springaspect.core.security;
+package com.czetsuyatech.springaspect.web.security;
 
 /**
  * @author Edward P. Legaspi | czetsuya@gmail.com
  */
 public class UserThreadLocalHolder {
+
+  private UserThreadLocalHolder() {
+
+  }
 
   private static ThreadLocal<CurrentUser> threadLocal = new ThreadLocal<>();
 

@@ -1,4 +1,4 @@
-package com.czetsuyatech.springaspect.core.security;
+package com.czetsuyatech.springaspect.web.security;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
